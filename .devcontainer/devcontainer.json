@@ -4,10 +4,8 @@
     "features": {
         "ghcr.io/devcontainers/features/aws-cli:1": {} 
     },
-    "postCreateCommand": "cd $CODESPACE_VSCODE_FOLDER",
+    "postCreateCommand":"cd $CODESPACE_VSCODE_FOLDER && sudo apt-get update && sudo apt-get install -y tree",
     "containerEnv": {
         "AWS_CLI_AUTO_PROMPT": "on-partial"
     }
 }
-
-

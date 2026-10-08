@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Creck for bucket name
+if [ -z "$1" ]; then
+    echo "There needs to be a bucket name"
+    exit 1
+fi
+
+
+
+# Creck for bucket name
+if [ -z "$2" ]; then
+    echo "There needs to be a file name"
+    exit 1
+fi
+
+FILENAME=$2
+BUCKET_NAME=$1
+
+OBJECT_KEY=$(basename "$FILENAME")
+
+aws s3api put-objects \
+--bucket $BUCKET_NAME \
+--body $FILENAME \
+--key $OBJECT_KEY
