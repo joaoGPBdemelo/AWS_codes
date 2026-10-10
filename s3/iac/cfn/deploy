@@ -9,4 +9,3 @@ aws cloudformation deploy \
 --no-execute-changeset \
 --region eu-west-1 \
 --stack-name $STACK_NAME
-
