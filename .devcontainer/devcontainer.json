@@ -5,7 +5,8 @@
 
     "features": {
         "ghcr.io/devcontainers/features/aws-cli:1": {},
-        "ghcr.io/devcontainers/features/terraform:1": {}
+        "ghcr.io/devcontainers/features/terraform:1": {},
+        "ghcr.io/devcontainers-extra/features/aws-cdk":{},
     },
 
     "postCreateCommand": "sudo apt-get update && sudo apt-get install -y tree",
